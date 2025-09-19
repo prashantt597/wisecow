@@ -20,6 +20,6 @@ jobs:
 
       - name: Build and push image
         run: |
-          IMAGE=your-dockerhub-user/wisecow:latest
+          IMAGE=wisecow:latest
           docker build -t $IMAGE .
           docker push $IMAGE
