@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: wisecow.example.com   # <-- CHANGE TO YOUR DOMAIN
+  - host: wisecowprod.3utilities.com   # <-- CHANGE TO YOUR DOMAIN
     http:
       paths:
       - path: /
@@ -19,5 +19,5 @@ spec:
               number: 80
   tls:
   - hosts:
-    - wisecow.example.com       # <-- SAME DOMAIN AS ABOVE
+    - wisecowprod.3utilities.com       # <-- SAME DOMAIN AS ABOVE
     secretName: wisecow-tls
