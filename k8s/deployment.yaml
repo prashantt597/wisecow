@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: wisecow
-        image: your-dockerhub-user/wisecow:latest   # <-- UPDATE IMAGE NAME
+        image: prashant0597/wisecow:latest   # <-- UPDATE IMAGE NAME
         ports:
         - containerPort: 4499
