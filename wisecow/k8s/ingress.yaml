@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wisecow
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: wisecow.example.com   # <-- CHANGE TO YOUR DOMAIN
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wisecow
+            port:
+              number: 80
+  tls:
+  - hosts:
+    - wisecow.example.com       # <-- SAME DOMAIN AS ABOVE
+    secretName: wisecow-tls
